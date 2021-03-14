@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+    <fieldset class="uk-fieldset">
+        <div class="uk-margin-small">
+            <label>User</label>
+            <select class="uk-select" formControlName="connectionId">
+                <option value="" selected></option>
+                <option *ngFor="let client of clients" [value]="client.connectionId">{{ client.name }}</option>
+            </select>
+        </div>
+        <div class="uk-margin-small">
+            <label><input class="uk-checkbox" type="checkbox" formControlName="private"> Private</label>
+        </div>
+        <div class="uk-margin-small">
+            <label>Message</label>
+            <textarea autofocus="autofocus" class="uk-textarea" rows="3" formControlName="message" (keydown.enter)="send()"></textarea>
+        </div>
+    </fieldset>
+</form>
+
+<ul class="uk-list uk-list-striped" id="messages"></ul>

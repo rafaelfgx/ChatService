@@ -1,0 +1,65 @@
+app-layout, app-layout-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+app-header {
+    background-color: #0A69b7;
+    padding: 1rem;
+}
+
+app-header * {
+    color: #FFF;
+    margin: 0;
+}
+
+main {
+    background-color: #FFF;
+    flex: auto;
+    padding: 1rem !important;
+}
+
+app-footer {
+    background-color: #242729;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+app-footer * {
+    color: #BBB;
+    margin: 0;
+}
+
+button, table thead th {
+    user-select: none;
+}
+
+#messages {
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.alert-success {
+    background: #edfbf6!important;
+    color: #32d296!important;
+}
+
+.alert-danger {
+    background: #fef4f6!important;
+    color: #f0506e!important;
+}
+
+.alert-primary {
+    background: #d8eafc!important;
+    color: #1e87f0!important;
+}
+
+.alert-warning {
+    background: #fff6ee!important;
+    color: #faa05a!important;
+}

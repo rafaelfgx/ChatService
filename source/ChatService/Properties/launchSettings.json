@@ -1,0 +1,12 @@
+{
+    "profiles": {
+        "ChatService": {
+            "applicationUrl": "https://localhost:5000",
+            "commandName": "Project",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "launchBrowser": true
+        }
+    }
+}

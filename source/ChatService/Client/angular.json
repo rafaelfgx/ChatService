@@ -1,0 +1,64 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "projects": {
+        "project": {
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "index": "src/index.html",
+                        "inlineStyleLanguage": "scss",
+                        "main": "src/main.ts",
+                        "outputPath": "dist",
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "tsConfig": "tsconfig.json",
+                        "assets": [
+                            "src/favicon.ico"
+                        ],
+                        "scripts": [
+                            "node_modules/uikit/dist/js/uikit.min.js",
+                            "node_modules/uikit/dist/js/uikit-icons.min.js"
+                        ],
+                        "styles": [
+                            "node_modules/uikit/dist/css/uikit.min.css",
+                            "src/styles.scss"
+                        ]
+                    },
+                    "configurations": {
+                        "development": {
+                            "buildOptimizer": false,
+                            "extractLicenses": false,
+                            "optimization": false,
+                            "sourceMap": true,
+                            "vendorChunk": true
+                        },
+                        "production": {
+                            "outputHashing": "all"
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "buildTarget": "project:build:production"
+                        },
+                        "development": {
+                            "buildTarget": "project:build:development",
+                            "proxyConfig": "proxy.json"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                }
+            },
+            "prefix": "app",
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src"
+        }
+    }
+}

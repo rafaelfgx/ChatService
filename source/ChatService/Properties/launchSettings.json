@@ -1,0 +1,13 @@
+{
+    "profiles": {
+        "ChatService": {
+            "applicationUrl": "https://localhost:5000",
+            "commandName": "Project",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
+            },
+            "launchBrowser": true
+        }
+    }
+}

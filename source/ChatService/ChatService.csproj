@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+        <SpaProxyServerUrl>http://localhost:4200</SpaProxyServerUrl>
+        <SpaRoot>Client</SpaRoot>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.SpaProxy" />
+    </ItemGroup>
+    <ItemGroup>
+        <Using Include="ChatService" />
+        <Using Include="Microsoft.AspNetCore.SignalR" />
+    </ItemGroup>
+</Project>
